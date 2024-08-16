@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <h1>CRUDS</h1>
+        <p>Product management system</p>
+      </div>
+
+      <div class="body">
+        <div class="row">
+          <input type="text" class="title" placeholder="Title" />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            class="price col-5 col-lg-2 me-3"
+            placeholder="Price"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            class="taxes col-5 col-lg-2 me-3"
+            placeholder="Tax"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            class="ads col-5 col-lg-2 me-3"
+            placeholder="Adds"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            class="discount col-5 col-lg-2 me-3"
+            placeholder="Discount"
+          />
+          <span class="total col-5 col-lg-3 mb-2"></span>
+          <input type="number" class="count" placeholder="Count" />
+          <input type="text" class="category" placeholder="Category" />
+          <button class="create">Create</button>
+          <input type="search" class="search" placeholder="Search" />
+        </div>
+
+        <div class="row search-by">
+          <button class="col-5" onclick="searchBy(this.id)" id="searchTitle">
+            Search by title
+          </button>
+          <button class="col-5" onclick="searchBy(this.id)" id="searchCategory">
+            Search by category
+          </button>
+        </div>
+
+        <div class="row">
+          <button class="del-all"></button>
+        </div>
+      </div>
+
+      <div class="div-table">
+        <table class="mt-3">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>TITLE</th>
+              <th>PRICE</th>
+              <th>TAXES</th>
+              <th>ADS</th>
+              <th>DISCOUNT</th>
+              <th>TOTAL</th>
+              <th>CATEGORY</th>
+              <th>UPDATE</th>
+              <th>DELETE</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
